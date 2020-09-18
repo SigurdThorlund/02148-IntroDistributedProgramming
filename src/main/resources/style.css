@@ -1,0 +1,44 @@
+/*
+CSS REFERENCE:
+https://gist.github.com/maxd/63691840fc372f22f470
+*/
+
+* {
+    -bright-white: #fafdfe;
+    -grey: bcc8cf;
+    -transparent-white: rgba(255,255,255,0.8);
+}
+
+.label{
+    -fx-font-size: 14;
+}
+
+.text-input{
+    -fx-background-color: transparent;
+}
+.text-input:focused {
+    -fx-background-color: -transparent-white;
+}
+
+.background{
+    -fx-background-size: stretch, stretch;
+    -fx-background-position: center center;
+}
+
+.title{
+    -fx-font-size: 75;
+}
+
+.menubox{
+    -fx-background-color: -bright-white;
+    -fx-background-radius: 10px;
+}
+
+.ipbox{
+    -fx-background-color: -transparent-white;
+    -fx-background-radius: 0px 0px 10px 10px;
+}
+
+.boldLabel{
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="450.0" minWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientGameController">
+   <children>
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Canvas fx:id="backgroundCanvas" height="450" width="800.0" />
+            <Canvas fx:id="terrainCanvas" height="450" width="800.0" />
+            <Canvas fx:id="spriteCanvas" height="450" width="800.0" />
+         </children>
+      </StackPane>
+      <HBox>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FORCE ">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="2.0" top="2.0" />
+               </HBox.margin>
+            </Text>
+            <ProgressBar fx:id="progress_bar" prefWidth="150.0" progress="0.0" style="-fx-accent: rgb(0, 255, 0);">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ProgressBar>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ANGLE ">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" top="2.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="angle_text" strokeType="OUTSIDE" strokeWidth="0.0" text="90">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="2.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HP  ">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="hp_text" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <Text fx:id="state_text" strokeType="OUTSIDE" strokeWidth="0.0" text="State">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="time_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Timer">
+               <font>
+                  <Font name="Agency FB" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="victoryArea" disable="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: rgb(255,255,255,0.4);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <GaussianBlur radius="15.0" />
+               </effect>
+            </Pane>
+            <VBox alignment="CENTER" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fx:id="victoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="VictoryText">
+                     <font>
+                        <Font name="Agency FB" size="50.0" />
+                     </font>
+                  </Text>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="8.0">
+                     <children>
+                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#goToLobby" text="To lobby" />
+                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#exit" text="Exit" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

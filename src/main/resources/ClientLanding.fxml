@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url(&quot;splash_landing.png&quot;);" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientLandingController">
+   <children>
+      <VBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <Label contentDisplay="CENTER" graphicTextGap="0.0" text="Tanks" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="75.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="title" />
+                  <String fx:value="boldLabel" />
+               </styleClass>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" maxWidth="350.0" spacing="8.0" style="-fx-background-color: rgb(250,250,250,0.8); -fx-background-radius: 10;">
+               <children>
+                  <VBox alignment="CENTER" spacing="8.0">
+                     <children>
+                        <Label styleClass="boldLabel" text="Enter username">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputUsername" alignment="CENTER" onAction="#informationEntered" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="8.0">
+                     <children>
+                        <Label styleClass="boldLabel" text="Enter IP of host">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputIP" alignment="CENTER" onAction="#informationEntered" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="8.0">
+                     <children>
+                        <Label styleClass="boldLabel" text="Enter name of lobby">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputLobby" alignment="CENTER" onAction="#informationEntered" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="connectionTextArea" contentDisplay="RIGHT" text="Connecting to host">
+                     <graphic>
+                        <ProgressIndicator minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="16.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="errorTextArea" contentDisplay="RIGHT" styleClass="boldLabel" text="An error occured:">
+                     <graphic>
+                        <Label fx:id="errorText" text="ERRORREASON" />
+                     </graphic>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
